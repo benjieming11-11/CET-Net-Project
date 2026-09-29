@@ -1,0 +1,428 @@
+/* ============================================================
+   Base
+============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #ffffff;
+
+    color: #222222;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   Main Page
+============================================================ */
+
+.page {
+    width: 100%;
+}
+
+
+/* ============================================================
+   Hero
+============================================================ */
+
+.hero {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding:
+        80px
+        24px
+        55px;
+
+    text-align: center;
+}
+
+
+/* Main title */
+
+.paper-title {
+    margin: 0;
+
+    font-size: 52px;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: -1px;
+}
+
+
+/* Paper subtitle */
+
+.paper-subtitle {
+    max-width: 850px;
+
+    margin:
+        18px
+        auto
+        28px;
+
+    font-size: 25px;
+
+    line-height: 1.4;
+
+    color: #333333;
+}
+
+
+/* Authors */
+
+.authors {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap:
+        8px
+        24px;
+
+    margin-top: 20px;
+
+    font-size: 17px;
+}
+
+
+/* Institution */
+
+.affiliation {
+    margin-top: 8px;
+
+    margin-bottom: 0;
+
+    color: #666666;
+
+    font-size: 15px;
+}
+
+
+/* ============================================================
+   Buttons
+============================================================ */
+
+.links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+
+.project-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 105px;
+
+    padding:
+        9px
+        18px;
+
+    border:
+        1px solid
+        #222222;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    color: #222222;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+
+.project-button:hover {
+    background: #222222;
+
+    color: #ffffff;
+}
+
+
+/*
+   暂时没有链接时使用。
+   等以后有论文和代码地址时删除 disabled class。
+*/
+
+.project-button.disabled {
+    color: #888888;
+
+    border-color: #cccccc;
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   Sections
+============================================================ */
+
+.section {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding:
+        55px
+        24px;
+
+    text-align: center;
+}
+
+
+.section h2 {
+    margin:
+        0
+        0
+        12px;
+
+    font-size: 30px;
+
+    line-height: 1.3;
+}
+
+
+.section-description {
+    max-width: 720px;
+
+    margin:
+        0
+        auto
+        30px;
+
+    color: #666666;
+
+    font-size: 16px;
+}
+
+
+/* ============================================================
+   Demo Video Placeholder
+============================================================ */
+
+.demo-section {
+    padding-top: 35px;
+}
+
+
+.video-placeholder {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    margin:
+        30px
+        auto
+        0;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        #dddddd;
+
+    border-radius: 4px;
+
+    background: #f5f5f5;
+}
+
+
+.placeholder-content {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.play-icon {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 42px;
+
+    color: #555555;
+}
+
+
+.placeholder-content p {
+    margin: 0;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: #333333;
+}
+
+
+.placeholder-note {
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    color: #888888;
+}
+
+
+/* ============================================================
+   Overview
+============================================================ */
+
+.summary-section {
+    max-width: 850px;
+}
+
+
+.summary-text {
+    margin: 0;
+
+    color: #444444;
+
+    font-size: 17px;
+
+    text-align: left;
+}
+
+
+/* ============================================================
+   Footer
+============================================================ */
+
+.footer {
+    max-width: 1050px;
+
+    margin:
+        40px
+        auto
+        0;
+
+    padding:
+        30px
+        24px
+        40px;
+
+    border-top:
+        1px solid
+        #eeeeee;
+
+    color: #888888;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   Tablet
+============================================================ */
+
+@media (max-width: 800px) {
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .paper-title {
+        font-size: 42px;
+    }
+
+    .paper-subtitle {
+        font-size: 21px;
+    }
+
+}
+
+
+/* ============================================================
+   Mobile
+============================================================ */
+
+@media (max-width: 520px) {
+
+    .hero {
+        padding:
+            45px
+            18px
+            35px;
+    }
+
+    .paper-title {
+        font-size: 36px;
+    }
+
+    .paper-subtitle {
+        font-size: 19px;
+    }
+
+    .authors {
+        font-size: 15px;
+    }
+
+    .section {
+        padding:
+            40px
+            18px;
+    }
+
+    .section h2 {
+        font-size: 26px;
+    }
+
+    .placeholder-content p {
+        font-size: 18px;
+    }
+
+    .summary-text {
+        font-size: 16px;
+    }
+
+}
