@@ -8,7 +8,7 @@
 
     <meta
         name="description"
-        content="CET-Net project page for accident anticipation under partial observability."
+        content="CET-Net: Partially Observable Evidence Revision for Accident Anticipation."
     >
 
     <title>CET-Net</title>
@@ -16,13 +16,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
     <main class="page">
 
-        <!-- ==================================================
+        <!-- =========================================================
              Header
-        =================================================== -->
+        ========================================================== -->
+
         <header class="hero">
 
             <h1 class="paper-title">
@@ -33,22 +35,26 @@
                 Partially Observable Evidence Revision for Accident Anticipation
             </p>
 
-            <!-- Authors: 暂时使用占位内容 -->
+
+            <!-- Authors -->
             <div class="authors">
+
                 <span>Author One</span>
                 <span>Author Two</span>
                 <span>Author Three</span>
+
             </div>
+
 
             <!-- Institution -->
             <p class="affiliation">
                 Institution / Laboratory
             </p>
 
-            <!-- Links -->
-            <div class="links">
 
-                <!-- 后续替换 href -->
+            <!-- Project Links -->
+            <div class="project-links">
+
                 <a class="project-button disabled" href="#">
                     Paper
                 </a>
@@ -62,68 +68,74 @@
         </header>
 
 
-        <!-- ==================================================
-             Demo
-        =================================================== -->
-        <section class="section demo-section">
 
-            <h2>
+        <!-- =========================================================
+             Video Demo
+        ========================================================== -->
+
+        <section class="demo-section">
+
+            <h2 class="section-title">
                 Video Demo
             </h2>
 
             <p class="section-description">
-                Demonstration of CET-Net under partially observable driving scenarios.
+                Qualitative demonstration of CET-Net for accident anticipation
+                under partially observable driving scenarios.
             </p>
 
-            <!--
-                现在不放真正视频。
-                后面会把这个 div 替换成 <video>。
-            -->
-            <div class="video-placeholder">
 
-                <div class="placeholder-content">
+            <div class="video-wrapper">
 
-                    <span class="play-icon">
-                        ▶
-                    </span>
+                <video
+                    class="demo-video"
+                    controls
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                >
 
-                    <p>
-                        CET-Net Demo Video
-                    </p>
+                    <source
+                        src="video/test.mp4"
+                        type="video/mp4"
+                    >
 
-                    <span class="placeholder-note">
-                        Video will be added later
-                    </span>
+                    Your browser does not support HTML5 video.
 
-                </div>
+                </video>
 
             </div>
 
         </section>
 
 
-        <!-- ==================================================
-             Optional short description
-             后续不需要可以整个删除
-        =================================================== -->
-        <section class="section summary-section">
 
-            <h2>
+        <!-- =========================================================
+             Short Overview
+        ========================================================== -->
+
+        <section class="overview-section">
+
+            <h2 class="section-title">
                 Overview
             </h2>
 
-            <p class="summary-text">
-                CET-Net studies accident anticipation under partial observability
-                by continuously revising risk-related evidence as new observations
-                become available.
+            <p class="overview-text">
+                CET-Net addresses accident anticipation under partial
+                observability by maintaining and revising risk-related
+                evidence as new visual observations become available.
             </p>
 
         </section>
 
 
-        <!-- ==================================================
+
+        <!-- =========================================================
              Footer
-        =================================================== -->
+        ========================================================== -->
+
         <footer class="footer">
 
             <p>
