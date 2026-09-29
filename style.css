@@ -1,17 +1,20 @@
 /* ============================================================
-   Base
+   Global
 ============================================================ */
 
 * {
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     margin: 0;
+
     background: #ffffff;
 
     color: #222222;
@@ -22,55 +25,54 @@ body {
         sans-serif;
 
     line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
 }
 
-
-/* ============================================================
-   Main Page
-============================================================ */
 
 .page {
     width: 100%;
 }
 
 
+
 /* ============================================================
-   Hero
+   Header
 ============================================================ */
 
 .hero {
-    max-width: 1050px;
+    width: 100%;
+
+    max-width: 1100px;
 
     margin: 0 auto;
 
     padding:
-        80px
+        72px
         24px
-        55px;
+        48px;
 
     text-align: center;
 }
 
 
-/* Main title */
-
 .paper-title {
     margin: 0;
 
-    font-size: 52px;
+    font-size: 54px;
 
     font-weight: 700;
 
-    line-height: 1.15;
+    line-height: 1.1;
 
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
+
+    color: #111111;
 }
 
 
-/* Paper subtitle */
-
 .paper-subtitle {
-    max-width: 850px;
+    max-width: 900px;
 
     margin:
         18px
@@ -79,13 +81,18 @@ body {
 
     font-size: 25px;
 
+    font-weight: 400;
+
     line-height: 1.4;
 
     color: #333333;
 }
 
 
-/* Authors */
+
+/* ============================================================
+   Authors
+============================================================ */
 
 .authors {
     display: flex;
@@ -96,32 +103,34 @@ body {
 
     gap:
         8px
-        24px;
+        25px;
 
-    margin-top: 20px;
+    margin-top: 22px;
 
     font-size: 17px;
+
+    color: #222222;
 }
 
-
-/* Institution */
 
 .affiliation {
-    margin-top: 8px;
-
-    margin-bottom: 0;
-
-    color: #666666;
+    margin:
+        8px
+        0
+        0;
 
     font-size: 15px;
+
+    color: #777777;
 }
+
 
 
 /* ============================================================
    Buttons
 ============================================================ */
 
-.links {
+.project-links {
     display: flex;
 
     justify-content: center;
@@ -141,11 +150,11 @@ body {
 
     justify-content: center;
 
-    min-width: 105px;
+    min-width: 100px;
 
     padding:
         9px
-        18px;
+        20px;
 
     border:
         1px solid
@@ -164,8 +173,9 @@ body {
     font-weight: 600;
 
     transition:
-        background 0.15s ease,
-        color 0.15s ease;
+        background-color 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
 }
 
 
@@ -176,13 +186,8 @@ body {
 }
 
 
-/*
-   暂时没有链接时使用。
-   等以后有论文和代码地址时删除 disabled class。
-*/
-
 .project-button.disabled {
-    color: #888888;
+    color: #999999;
 
     border-color: #cccccc;
 
@@ -190,64 +195,64 @@ body {
 }
 
 
+
 /* ============================================================
-   Sections
+   Section Common
 ============================================================ */
 
-.section {
-    max-width: 1050px;
-
-    margin: 0 auto;
-
-    padding:
-        55px
-        24px;
-
-    text-align: center;
-}
-
-
-.section h2 {
+.section-title {
     margin:
         0
         0
-        12px;
+        10px;
 
     font-size: 30px;
 
     line-height: 1.3;
+
+    font-weight: 650;
+
+    color: #161616;
 }
 
 
 .section-description {
-    max-width: 720px;
+    max-width: 760px;
 
     margin:
         0
         auto
         30px;
 
-    color: #666666;
-
     font-size: 16px;
+
+    color: #666666;
 }
+
 
 
 /* ============================================================
-   Demo Video Placeholder
+   Video Demo
 ============================================================ */
 
 .demo-section {
-    padding-top: 35px;
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding:
+        40px
+        24px
+        55px;
+
+    text-align: center;
 }
 
 
-.video-placeholder {
-    position: relative;
-
+.video-wrapper {
     width: 100%;
-
-    aspect-ratio: 16 / 9;
 
     margin:
         30px
@@ -256,80 +261,71 @@ body {
 
     overflow: hidden;
 
+    background: #000000;
+
     border:
         1px solid
         #dddddd;
 
-    border-radius: 4px;
-
-    background: #f5f5f5;
+    box-shadow:
+        0
+        2px
+        10px
+        rgba(0, 0, 0, 0.05);
 }
 
 
-.placeholder-content {
-    position: absolute;
-
-    inset: 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-
-.play-icon {
+.demo-video {
     display: block;
 
-    margin-bottom: 12px;
+    width: 100%;
 
-    font-size: 42px;
+    height: auto;
 
-    color: #555555;
+    aspect-ratio: 16 / 9;
+
+    object-fit: contain;
+
+    background: #000000;
 }
 
-
-.placeholder-content p {
-    margin: 0;
-
-    font-size: 22px;
-
-    font-weight: 600;
-
-    color: #333333;
-}
-
-
-.placeholder-note {
-    margin-top: 8px;
-
-    font-size: 14px;
-
-    color: #888888;
-}
 
 
 /* ============================================================
    Overview
 ============================================================ */
 
-.summary-section {
+.overview-section {
+    width: 100%;
+
     max-width: 850px;
+
+    margin: 0 auto;
+
+    padding:
+        50px
+        24px
+        60px;
+
+    text-align: center;
 }
 
 
-.summary-text {
-    margin: 0;
-
-    color: #444444;
+.overview-text {
+    margin:
+        20px
+        auto
+        0;
 
     font-size: 17px;
 
+    line-height: 1.75;
+
+    color: #444444;
+
     text-align: left;
 }
+
 
 
 /* ============================================================
@@ -337,28 +333,28 @@ body {
 ============================================================ */
 
 .footer {
-    max-width: 1050px;
+    width: calc(100% - 48px);
 
-    margin:
-        40px
-        auto
-        0;
+    max-width: 1100px;
+
+    margin: 0 auto;
 
     padding:
-        30px
-        24px
+        28px
+        0
         40px;
 
     border-top:
         1px solid
         #eeeeee;
 
-    color: #888888;
-
     text-align: center;
 
     font-size: 13px;
+
+    color: #999999;
 }
+
 
 
 /* ============================================================
@@ -368,18 +364,29 @@ body {
 @media (max-width: 800px) {
 
     .hero {
-        padding-top: 60px;
+        padding:
+            55px
+            22px
+            40px;
     }
 
+
     .paper-title {
-        font-size: 42px;
+        font-size: 44px;
     }
+
 
     .paper-subtitle {
         font-size: 21px;
     }
 
+
+    .section-title {
+        font-size: 28px;
+    }
+
 }
+
 
 
 /* ============================================================
@@ -390,39 +397,89 @@ body {
 
     .hero {
         padding:
-            45px
+            42px
             18px
-            35px;
+            32px;
     }
+
 
     .paper-title {
         font-size: 36px;
+
+        letter-spacing: -0.8px;
     }
 
+
     .paper-subtitle {
+        margin-top: 15px;
+
         font-size: 19px;
     }
 
+
     .authors {
+        gap:
+            5px
+            16px;
+
         font-size: 15px;
     }
 
-    .section {
-        padding:
-            40px
-            18px;
+
+    .affiliation {
+        font-size: 14px;
     }
 
-    .section h2 {
+
+    .project-links {
+        margin-top: 22px;
+    }
+
+
+    .project-button {
+        min-width: 92px;
+
+        padding:
+            8px
+            16px;
+
+        font-size: 14px;
+    }
+
+
+    .demo-section {
+        padding:
+            30px
+            16px
+            40px;
+    }
+
+
+    .overview-section {
+        padding:
+            40px
+            20px
+            50px;
+    }
+
+
+    .section-title {
         font-size: 26px;
     }
 
-    .placeholder-content p {
-        font-size: 18px;
+
+    .section-description {
+        font-size: 15px;
     }
 
-    .summary-text {
+
+    .overview-text {
         font-size: 16px;
+    }
+
+
+    .footer {
+        width: calc(100% - 36px);
     }
 
 }
